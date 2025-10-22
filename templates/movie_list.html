@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Cinema Movies</title>
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      a {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>All Movies in our Cinema</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Genre</th>
+          <th>Description</th>
+          <th>Release Year</th>
+          <th>Rating</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for movie in movies %}
+        <tr>
+          <td>{{ movie.Movie_name }}</td>
+          <td>{{ movie.Movie_genre }}</td>
+          <td>{{ movie.Movie_description }}</td>
+          <td>{{ movie.Release_year }}</td>
+          <td>{{ movie.Movie_rating }} stars</td>
+          <td>
+            <a href="{% url 'movie_detail' movie.Movie_id %}">See Movie</a>
+            <a href="{% url 'update_movie' movie.Movie_id %}">Update Movie</a>
+            <a href="{% url 'delete_movie' movie.Movie_id %}">Delete Movie</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br />
+    <a href="{% url 'add_movie' %}">Add New Movie to the list</a>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Movie Detail</title>
+  </head>
+  <body>
+    <h2>Movie Details</h2>
+
+    <p>ID: {{ movie.Movie_id }}</p>
+    <p>Name: {{ movie.Movie_name }}</p>
+    <p>Genre: {{ movie.Movie_genre }}</p>
+    <p>Description: {{ movie.Movie_description }}</p>
+    <p>Release Year: {{ movie.Release_year }}</p>
+    <p>Rating: {{ movie.Movie_rating }}</p>
+    <p>Dont forget to watch this movie {{ movie.Movie_name }} its nice</p>
+
+    <a href="{% url 'update_movie' movie.Movie_id %}">Update Movie</a>
+    <a href="{% url 'delete_movie' movie.Movie_id %}">Delete Movie</a>
+    <a href="{% url 'movie_list' %}">Back to List</a>
+  </body>
+</html>
