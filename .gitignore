@@ -16,4 +16,41 @@ htmlcov/
 .tox/
 .coverage
 .coverage.*
-.py
+
+# Virtual environments
+venv/
+env/
+ENV/
+my_env/
+
+# IDE
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+Thumbs.db
+.DS_Store
+*.swp
+
+# Django
+*.sqlite3
+/staticfiles/
+/media/
+.env.local
+
+# Python
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Node (if used)
+package-lock.json
+yarn.lock
