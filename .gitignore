@@ -1,0 +1,19 @@
+*.pyc
+__pycache__/
+db.sqlite3
+/media
+/static
+.env
+.vscode/
+node_modules/
+.DS_Store
+coverage
+*.log
+.idea/
+
+# Ignore test coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.py
