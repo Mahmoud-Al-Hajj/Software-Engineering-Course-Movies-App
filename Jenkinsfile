@@ -31,7 +31,7 @@ pipeline {
           docker images
 
           REM build the image inside minikube's docker daemon
-          docker build -t website:latest .
+          docker build -t mydjangoapp:latest .
         '''
       }
     }
